@@ -2,12 +2,10 @@ pipeline {
     agent any
     stages{
         stage('Checkout'){
-			steps {
-                 git 'https://github.com/akshu20791/DevOpsClassCodes.git'
+		steps {
+                 git 'https://github.com/Vinni005/POWER_OF_NUMBER.git'
             }
         }
-
-    stages {
         stage('Update the packages') {
             steps {
                 sh 'sudo yum update httpd -y'
