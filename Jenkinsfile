@@ -1,9 +1,10 @@
 pipeline {
     agent any
-    stages{
-        stage('Checkout'){
-		steps {
-                 git 'https://github.com/Vinni005/POWER_OF_NUMBER.git'
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Cloning...'
+                git branch: 'main', url: 'https://github.com/Vinni005/POWER_OF_NUMBER.git'
             }
         }
         stage('Update the packages') {
